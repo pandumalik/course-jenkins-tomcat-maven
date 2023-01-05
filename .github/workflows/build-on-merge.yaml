@@ -5,6 +5,10 @@ on:
     branches:
       - production
 
+env:
+  JENKINS_URL: https://preview-55cc2cc7-a3b5-47e3-a3b0-6bcaed12a2d0.usergeneratedcontent.udemylabs.com
+  JENKINS_JOB: maven-deployment
+
 jobs:
   trigger-jenkins-build:
     name: Jenkins Build
@@ -12,4 +16,4 @@ jobs:
     steps:
       - name: trigger jenkins build url
         run:
-          curl https://preview-55cc2cc7-a3b5-47e3-a3b0-6bcaed12a2d0.usergeneratedcontent.udemylabs.com/job/maven-deployment/build?token=${{ secrets.JENKINS_TOKEN }}
+          curl --request POST '${{ env.JENKINS_URL }}/buildByToken/build?job=${{ env.JENKINS_JOB }}&token=${{ secrets.JENKINS_TOKEN }}'
