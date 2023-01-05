@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [ closed ]
     branches:
-      - release
+      - production
 
 jobs:
   trigger-jenkins-build:
