@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: appleboy/jenkins-action@master
       with:
-        url: "https://preview-55cc2cc7-a3b5-47e3-a3b0-6bcaed12a2d0.usergeneratedcontent.udemylabs.com/"
+        url: "https://preview-55cc2cc7-a3b5-47e3-a3b0-6bcaed12a2d0.usergeneratedcontent.udemylabs.com"
         user: "usertrigger"
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "maven-deployment"
