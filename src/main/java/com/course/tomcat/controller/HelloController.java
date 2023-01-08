@@ -18,8 +18,4 @@ public class HelloController {
     int random(){
         return ThreadLocalRandom.current().nextInt(0,1000);
     }
-    @GetMapping(value = "/helloworld")
-    String helloWorld(){
-        return "Hello World 3";
-    }
 }
